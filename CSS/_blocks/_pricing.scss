@@ -1,0 +1,182 @@
+.pricing__section {
+    padding: 4rem 0;
+    .pricing__title {
+        text-align: center;
+        width: 55%;
+        margin: 0 auto 4rem auto;
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            margin: 2rem 0;
+        }
+        .pricing_changing_group {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            justify-content: center;
+
+            .changing_circle_parent {
+                width: 90px;
+                height: 40px;
+                background-color: $brown;
+                border-radius: 70px;
+                position: relative;
+                transition: all 1s ease-in-out;
+                cursor: pointer;
+
+                .changing_circle {
+                    width: 25px;
+                    height: 25px;
+                    background-color: white;
+                    border-radius: 50%;
+                    position: absolute;
+                    transition: all 1s ease-in-out;
+                    top: 20%;
+                }
+            }
+
+            .changing_item {
+                font-size: 1.3rem;
+
+                span {
+                    padding: .5rem 1rem;
+                    font-size: .6rem;
+                    border-radius: 8px;
+                    background-color: $yellow;
+                }
+            }
+        }
+    }
+    .pricing__filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+        margin: 0 auto;
+        border-bottom: 3px solid $gray;
+        p {
+            width: 50%;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 3;
+                width: 0%;
+                height: 3px;
+                right: 0;
+                bottom: -3px;
+                background-color: $brown;
+            }
+            &.price_active {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    z-index: 4;
+                    width: 100%;
+                    height: 3px;
+                    bottom: -3px;
+                    background-color: $brown;
+                }
+            }
+        }
+    }
+    .pricing__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 3rem;
+        .price__card {
+            width: 20%;
+            box-shadow: 0 0 3px 0 $gray;
+            padding: 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            .description {
+                font-size: 10px;
+            }
+            .price__current {
+                margin: 1rem 0;
+                p {
+                    font-size: 1.9rem;
+                    font-weight: 600;
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+            button {
+                margin-bottom: 1rem;
+                border: 2px solid black;
+                &:hover {
+                    border: 2px solid $brown;
+                }
+            }
+            &:hover {
+                box-shadow: 0 0 10px 0 $gray;
+            }
+        }
+    }
+}
+
+.left {
+    left: .5rem;
+    transition: all 1s ease-in-out;
+}
+
+.right {
+    right: .5rem;
+    transition: all 1s ease-in-out;
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+    .pricing__section {
+        .pricing__title {
+            width: 90%;
+            margin: 0 auto 2rem auto;
+            h1 {
+                font-size: 2rem;
+            }
+            .pricing_changing_group {
+                flex-wrap: wrap;
+            }
+        }
+        .pricing__filter {
+            width: 90%;
+        }
+        .pricing__cards {
+            flex-direction: column;
+            .price__card {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width: 460px) and (max-width: 900px) {
+    .pricing__section {
+        .pricing__title {
+            width: 90%;
+            margin: 0 auto 2rem auto;
+            h1 {
+                font-size: 3rem;
+            }
+            .pricing_changing_group {
+                flex-wrap: wrap;
+            }
+        }
+        .pricing__filter {
+            width: 90%;
+        }
+        .pricing__cards {
+            flex-wrap: wrap;
+            .price__card {
+                width: 45%;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+$brown: #B00000;
+$gray: #DAD8D8;
+$yellow: 
+#FFE87A;
+@import './_blocks/header';
+@import './_blocks/us';
+@import './_blocks/pricing';
+@import './_blocks/testimontials';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    padding: 12px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    &.filled {
+        background-color: $brown;
+        box-shadow: 0 0 5px 0 $brown;
+        color: white;
+        border: 1px solid $brown;
+        &:hover {
+            background-color: transparent;
+            color: black;
+        }
+    }
+    &:hover {
+        background-color: $brown;
+        box-shadow: 0 0 5px 0 $brown;
+        color: white;
+        border: 1px solid $brown;
+    }
+}
+
+.hidden {
+    display: none !important;
+    transition: all 1s ease-in-out;
+}

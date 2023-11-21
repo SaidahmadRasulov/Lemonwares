@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lemonwares</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- Icon link  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar__section">
+        <div class="container">
+          <div class="navbar">
+            <div class="navbar__logo">
+              <div class="logo_image">
+                <img src="./Assets/Logo.png" alt="" />
+              </div>
+              <a href="#our"> Our Services </a>
+            </div>
+            <nav class="navbar__nav">
+              <ul class="nav__group">
+                <li class="nav__item">
+                  <a href="#about"> About </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#blog"> Blog&News </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contact"> Contact </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="navbar__control">
+              <a href="https://www.wikipedia.com" target="_blank"> Account </a>
+              <div class="vertical_line"></div>
+              <div class="navbar__contact">
+                <i class="bx bx-phone"></i>
+                <p>+2349067322844</p>
+              </div>
+            </div>
+            <nav class="media__nav">
+              <i class="bx bx-list-ul" onclick="HandleToggle()"></i>
+              <ul class="media__nav_group hidden" onclick="HandleToggle()">
+                <li class="nav__item">
+                  <a href="#about"> About </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#blog"> Blog&News </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contact"> Contact </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#account">Account</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header__content_section">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__title">
+              <div class="header__title_nav">
+                <ul class="header__title_filter">
+                  <li
+                    class="title_filter_item title_active"
+                    onclick="FilterHeader('Hosting')"
+                  >
+                    Hosting
+                  </li>
+                  <li
+                    class="title_filter_item"
+                    onclick="FilterHeader('Domain')"
+                  >
+                    Domain
+                  </li>
+                  <li class="title_filter_item" onclick="FilterHeader('SEO')">
+                    SEO
+                  </li>
+                  <li class="title_filter_item" onclick="FilterHeader('Email')">
+                    Email
+                  </li>
+                </ul>
+                <div class="horizontal_line"></div>
+              </div>
+              <div class="title__content"></div>
+              <div class="title__buttons">
+                <button class="filled">Create an account</button>
+                <button>Choose your plan</button>
+              </div>
+            </div>
+            <div class="header__image">
+              <img src="./Assets/headerImage.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="us__section">
+        <div class="container">
+          <div class="us__title_content">
+            <div class="us__title">
+              <h1>True Cloud Web  Hosting</h1>
+              <p>True Cloud Web Hosting All of the hosting packages we offer are deployed instantly on our SSD powered cloud. We don’t use dedicated servers that operate on single pieces of hardware. Our entire infrastructure is built to be reliable, secure, and scalable.</p>
+            </div>
+            <ul class="us__logos">
+              <li class="logos_item">
+                <img src="./Assets/panel.png" alt="">
+              </li>
+              <li class="logos_item">
+                <img src="./Assets/secure.png" alt="">
+              </li>
+              <li class="logos_item">
+                <img src="./Assets/lite.png" alt="">
+              </li>
+              <li class="logos_item">
+                <img src="./Assets/lous.png" alt="">
+              </li>
+              <li class="logos_item">
+                <img src="./Assets/word.png" alt="">
+              </li>
+              <li class="logos_item">
+                <img src="./Assets/cloud.png" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="us_cards"></div>
+        </div>
+      </section>
+      <section class="pricing__section">
+        <div class="container">
+          <div class="pricing__title">
+            <h1>Ready to get started with Lemon Wares?</h1>
+            <p>Choose the package that suits you</p>
+            <ul class="pricing_changing_group">
+              <li class="changing_item">Monthly</li>
+              <li class="changing_item changing_circle_parent" onclick="toggleMove()">
+                <div class="changing_circle"></div>
+              </li>
+              <li class="changing_item">Yearly</li>
+              <li class="changing_item">
+                <span>20%  discount</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing__filter">
+            <p class="filter__item price_active" onclick="filterPrice('Basic')">Basic</p>
+            <p class="filter__item" onclick="filterPrice('Premium')">Premium</p>
+          </div>
+          <div class="pricing__cards"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
