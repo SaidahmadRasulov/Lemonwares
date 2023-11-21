@@ -3,6 +3,7 @@
 const titleContent = document.querySelector(".title__content");
 const titleContainer = document.querySelector(".header__title_filter");
 const titleItem = titleContainer.getElementsByClassName("title_filter_item");
+const navbar = document.querySelector('.navbar__section');
 let value = "Hosting";
 const headerDate = [
   {
@@ -56,6 +57,15 @@ function RenderingHeader() {
   }
 }
 RenderingHeader();
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 0) {
+    navbar.classList.add('fixed')
+  } else {
+    navbar.classList.remove('fixed')
+  }
+})
+
 // ---------------------------------------------------------------------------
 
 const mediaNav = document.querySelector(".media__nav_group");

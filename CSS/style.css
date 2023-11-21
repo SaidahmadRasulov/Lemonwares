@@ -248,6 +248,17 @@ header .media__nav {
     width: 100%;
   }
 }
+.fixed {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(245, 245, 245, 0.758);
+  padding: 0;
+  z-index: 100;
+}
+.fixed .navbar {
+  padding: 0.5rem 2rem;
+}
+
 .us__section {
   padding: 3rem 0;
 }
@@ -512,12 +523,145 @@ header .media__nav {
     width: 45%;
   }
 }
+.testimontials__section .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.testimontials__section .container .testimontials__title {
+  width: 50%;
+  position: relative;
+}
+.testimontials__section .container .testimontials__title .big_quote {
+  opacity: 0.4;
+}
+.testimontials__section .container .testimontials__title .testimontial__title {
+  position: relative;
+  top: -5rem;
+  left: 5rem;
+}
+.testimontials__section .container .testimontials__title .testimontial__title h1 {
+  font-size: 3rem;
+  width: 70%;
+}
+.testimontials__section .container .testimontials__title .testimontial__card {
+  width: 50%;
+  padding: 2rem;
+  box-shadow: 0 0 5px 0 #DAD8D8;
+  float: right;
+}
+.testimontials__section .container .testimontials__title .testimontial__card .testimontial__card_header {
+  height: 80px;
+}
+.testimontials__section .container .testimontials__title .testimontial__card .testimontial__card_body {
+  position: relative;
+}
+.testimontials__section .container .testimontials__title .testimontial__card .testimontial__card_body img {
+  position: relative;
+  left: -1.4rem;
+}
+.testimontials__section .container .testimontials__title .testimontial__card .testimontial__card_body p {
+  margin-bottom: 2rem;
+}
+.testimontials__section .container .testimontials__title .testimontial__card span {
+  color: #DAD8D8;
+}
+.testimontials__section .container .testimontials__title .testimontial__card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 #DAD8D8;
+}
+.testimontials__section .container .testimontials__content {
+  width: 45%;
+}
+.testimontials__section .container .testimontials__content .testimontial__card {
+  width: 80%;
+  padding: 1rem;
+  box-shadow: 0 0 5px 0 #DAD8D8;
+  margin-bottom: 2rem;
+}
+.testimontials__section .container .testimontials__content .testimontial__card.small_width {
+  width: 60%;
+}
+.testimontials__section .container .testimontials__content .testimontial__card p {
+  margin: 2rem 0;
+}
+.testimontials__section .container .testimontials__content .testimontial__card span {
+  color: #DAD8D8;
+}
+.testimontials__section .container .testimontials__content .testimontial__card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 #DAD8D8;
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .testimontials__section .container {
+    flex-direction: column;
+    align-items: initial;
+  }
+  .testimontials__section .container .testimontials__title {
+    width: 90%;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__title {
+    left: 1rem;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__title h1 {
+    width: 100%;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__card {
+    float: initial;
+    width: 95%;
+    margin: 0 auto 0 1.5rem;
+  }
+  .testimontials__section .container .testimontials__content {
+    width: 87%;
+    margin: 0 auto;
+  }
+  .testimontials__section .container .testimontials__content .testimontial__card {
+    width: 100%;
+  }
+  .testimontials__section .container .testimontials__content .testimontial__card.small_width {
+    width: 100%;
+  }
+}
+@media (min-width: 460px) and (max-width: 900px) {
+  .testimontials__section {
+    padding: 0 2rem;
+  }
+  .testimontials__section .container {
+    align-items: initial;
+  }
+  .testimontials__section .container .testimontials__title {
+    width: 90%;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__title {
+    left: 1rem;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__title h1 {
+    width: 100%;
+  }
+  .testimontials__section .container .testimontials__title .testimontial__card {
+    float: initial;
+    width: 95%;
+    margin: 0 auto 0 1.5rem;
+  }
+  .testimontials__section .container .testimontials__content {
+    width: 87%;
+    margin: 0 auto;
+  }
+  .testimontials__section .container .testimontials__content .testimontial__card {
+    width: 100%;
+  }
+  .testimontials__section .container .testimontials__content .testimontial__card.small_width {
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 .container {
