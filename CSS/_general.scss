@@ -1,11 +1,13 @@
 $brown: #B00000;
 $gray: #DAD8D8;
-$yellow: 
-#FFE87A;
+$yellow: #FFE87A;
+$secondary: #F7FAFE;
+$custom: #E6E6E6;
 @import './_blocks/header';
 @import './_blocks/us';
 @import './_blocks/pricing';
 @import './_blocks/testimontials';
+@import './_blocks/footer';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -13,7 +15,7 @@ $yellow:
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
     scroll-behavior: smooth;
 }
 
@@ -59,4 +61,14 @@ button {
 .hidden {
     display: none !important;
     transition: all 1s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+    background-color: $brown;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: $custom;
 }

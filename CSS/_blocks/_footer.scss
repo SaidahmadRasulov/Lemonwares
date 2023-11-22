@@ -1,0 +1,90 @@
+.footer__section {
+    .footer__top_content {
+        height: 50vh;
+        background-color: $secondary;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        margin-bottom: 3rem;
+        .footer__top_title {
+            width: 80%;
+            h1 {
+                font-size: 64px;
+            }
+            button {
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .left__image {
+            position: absolute;
+            left: -1rem;
+            bottom: 5rem;
+        }
+        .top__image {
+            position: absolute;
+            top: 0rem;
+            left: 30%;
+        }
+        .right__image {
+            position: absolute;
+            bottom: 3rem;
+            right: -1rem;
+        }
+    }
+    .footer__links_content {
+        background-color: $brown;
+        padding: 3rem 0;
+        .footer__flex {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer__links_logo {
+            width: 25%;
+            p {
+                margin-top: 1rem;
+                line-height: 32px;
+                color: $custom;
+                font-weight: 300;
+            }
+        }
+        .footer__links_groups {
+            display: flex;
+            justify-content: space-between;
+            width: 65%;
+            .footer__links_group {
+                line-height: 50px;
+                li {
+                    &:first-child {
+                        color: white;
+                        font-size: 1rem;
+                        font-weight: 500;
+                    }
+                    color: $custom;
+                    font-weight: 300;
+                    padding: .5rem 1rem;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: white;
+                        box-shadow: 0 0 4px 0 $secondary;
+                        color: black;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+        .copywrite {
+            color: white;
+            margin-top: 2rem;
+        }
+    }
+}
